@@ -1,22 +1,21 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import Header from "./Header";
+import Layout from "./Layout";
+import IndexPage from "./pages/IndexPage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import Post from "./Post";
 
 function App() {
   return (
-    <main>
-      <header>
-        <a href="className">MyBlog</a>
-        <nav>
-          <a href=""> login</a>
-          <a href=""> Register</a>
-        </nav>
-      </header>
-      <div className="entry">
-        <img
-          src="https://techcrunch.com/wp-content/uploads/2021/06/GettyImages-1160976646.jpg?w=730&crop=1"
-          alt=""
-        />
-      </div>
-    </main>
+    <Routes>
+      <Route path={"/"} element={<Layout />}>
+        <Route index element={<IndexPage />} />
+        <Route path={"/login"} element={<LoginPage />} />
+        <Route path={"/register"} element={<RegisterPage />} />
+      </Route>
+    </Routes>
   );
 }
 
