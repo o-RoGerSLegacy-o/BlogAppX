@@ -5,15 +5,12 @@ const Post = () => {
     <div className="post">
       <div className="image">
         <img
-          src="https://techcrunch.com/wp-content/uploads/2022/12/lawnmower-Large.jpeg?w=1390&crop=1"
+          src="https://qph.cf2.quoracdn.net/main-qimg-42176b4aa28615860eb53d67bd52ed37"
           alt=""
         />
       </div>
       <div className="texts">
-        <h2>
-          Googles DeepMind team highlights new system for teaching robots novel
-          tasks
-        </h2>
+        <h2>Kakashi Hatake -The Copy Ninja</h2>
         <p className="info">
           <a href=" " className="author">
             RogerS
@@ -21,12 +18,11 @@ const Post = () => {
           <time>2023-7-29 16.36</time>
         </p>
         <p className="summary">
-          oday at its special launch event, home backup power giant EcoFlow
-          launched a flurry of new products, including a “Whole-Home Backup
-          Power Solution.” The company also launched a battery-powered fridge
-          and a portable battery-powered air-conditioning unit, which both makes
-          sense. There’s also a lawn mower, which makes me think that preppers
-          will have delightfully pristine lawns, even as the apocalypse looms.
+          As an adult, Kakashi typically has a relaxed and almost bored
+          attitude, not prone to getting too worked up about anything or by
+          anyone. Despite his increasingly growing reputation and prowess as a
+          ninja, Kakashi has shown no signs of arrogance, and is rather modest
+          about his abilities.
         </p>
       </div>
     </div>
