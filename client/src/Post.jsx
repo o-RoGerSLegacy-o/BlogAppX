@@ -1,32 +1,34 @@
-import React from "react";
+import { formatISO9075 } from "date-fns";
+import { Link } from "react-router-dom";
 
-const Post = () => {
+export default function Post({
+  _id,
+  title,
+  summary,
+  cover,
+  content,
+  createdAt,
+  author,
+}) {
   return (
     <div className="post">
       <div className="image">
-        <img
-          src="https://qph.cf2.quoracdn.net/main-qimg-42176b4aa28615860eb53d67bd52ed37"
-          alt=""
-        />
+        <Link to={`/post/${_id}`}>
+          <img src={"http://localhost:4000/" + cover} alt="" />
+        </Link>
       </div>
       <div className="texts">
-        <h2>Kakashi Hatake -The Copy Ninja</h2>
+        <Link to={`/post/${_id}`}>
+          <h2>{title}</h2>
+        </Link>
         <p className="info">
-          <a href=" " className="author">
-            RogerS
+          <a className="author" href=" ">
+            {author.username}
           </a>
-          <time>2023-7-29 16.36</time>
+          <time>{formatISO9075(new Date(createdAt))}</time>
         </p>
-        <p className="summary">
-          As an adult, Kakashi typically has a relaxed and almost bored
-          attitude, not prone to getting too worked up about anything or by
-          anyone. Despite his increasingly growing reputation and prowess as a
-          ninja, Kakashi has shown no signs of arrogance, and is rather modest
-          about his abilities.
-        </p>
+        <p className="summary">{summary}</p>
       </div>
     </div>
   );
-};
-
-export default Post;
+}
